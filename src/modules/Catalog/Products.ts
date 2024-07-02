@@ -19,6 +19,11 @@ class Products extends BaseModule {
     this.variants = new Variants(requestHelper);
   }
 
+  /**
+   * Get one Product
+   * @param id Product ID
+   * @returns
+   */
   get(id: number): Promise<Response> {
     //Get one Product
     return this._execute(`/products/${id}`, {
@@ -26,6 +31,10 @@ class Products extends BaseModule {
     });
   }
 
+  /**
+   * Get all Products
+   * @returns
+   */
   getAll(): Promise<Response> {
     //Get all Products
     return this._execute("/products", {

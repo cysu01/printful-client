@@ -4,6 +4,7 @@ import { Shipping } from "./modules/Shipping";
 import { Tax } from "./modules/Tax";
 import { Orders } from "./modules/Orders";
 import { Catalog } from "./modules/Catalog";
+import { MockupGenerator } from "./modules/MockupGenerator";
 
 class PrintfulClient {
   public products: Products;
@@ -11,6 +12,7 @@ class PrintfulClient {
   public tax: Tax;
   public orders: Orders;
   public catalog: Catalog;
+  public mockupGenerator: MockupGenerator;
 
   /**
    *
@@ -25,6 +27,7 @@ class PrintfulClient {
     this.tax = new Tax(requestHelper);
     this.orders = new Orders(requestHelper);
     this.catalog = new Catalog(requestHelper);
+    this.mockupGenerator = new MockupGenerator(requestHelper);
   }
 }
 
